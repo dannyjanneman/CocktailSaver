@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\GarnishSeeder;
+use Database\Seeders\IceSeeder;
+use Database\Seeders\GlassSeeder;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,5 +18,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(UserSeeder::class);
+        $this->call(GarnishSeeder::class);
+        $this->call(IceSeeder::class);
+        $this->call(GlassSeeder::class);
     }
 }
