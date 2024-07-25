@@ -5,6 +5,8 @@ use Database\Seeders\UserSeeder;
 use Database\Seeders\GarnishSeeder;
 use Database\Seeders\IceSeeder;
 use Database\Seeders\GlassSeeder;
+use Database\Seeders\EquipmentSeeder;
+
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -21,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(GarnishSeeder::class);
         $this->call(IceSeeder::class);
         $this->call(GlassSeeder::class);
+        $this->call(EquipmentSeeder::class);
     }
 }
