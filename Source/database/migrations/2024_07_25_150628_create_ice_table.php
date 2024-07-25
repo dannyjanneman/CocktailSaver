@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cocktails', function (Blueprint $table) {
+        Schema::create('ice', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('glass_id')->constrained();
-            $table->foreignId('garnish_id')->constrained();
-            $table->foreignId('ice_id')->constrained('ice');
-            $table->boolean('eggwhite')->default(false);
+            $table->string('ice_type');
         });
     }
 
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cocktails');
+        Schema::dropIfExists('ice');
     }
 };
